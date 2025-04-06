@@ -3,8 +3,15 @@ import { EnergyGrid } from './components/EnergyGrid';
 import { getEnergyMix } from './services/api';
 import { FuelMix } from './types';
 
+
 export const App = () => {
-  return <h1>¡Hola mundo!</h1>;
+
+  return (
+    <div className="text-center mt-10 text-xl font-bold">
+      UK Energy Dashboard funcionando 🎉
+    </div>
+  );
+
   const [mix, setMix] = useState(() => [] as FuelMix[]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');

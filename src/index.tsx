@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { App } from './app';
+import { createRoot } from 'react-dom/client';
 
 
 export interface FuelMix {
@@ -11,6 +12,6 @@ export interface FuelMix {
 document.addEventListener('DOMContentLoaded', () => {
   const mount = document.getElementById('reactMountPoint');
   if (mount) {
-    ReactDOM.createRoot(mount).render(<App />);
+    createRoot(mount).render(<App />);
   }
 });
