@@ -4,6 +4,7 @@ import { getEnergyMix } from './services/api';
 import { FuelMix } from './types';
 
 export const App = () => {
+  return <h1>¡Hola mundo!</h1>;
   const [mix, setMix] = useState(() => [] as FuelMix[]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
