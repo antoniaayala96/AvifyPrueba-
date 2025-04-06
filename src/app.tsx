@@ -4,14 +4,14 @@ import { getEnergyMix } from './services/api';
 import { FuelMix } from './types';
 
 
+
 export const App = () => {
 
   return (
-    <div className="text-center mt-10 text-xl font-bold">
-      UK Energy Dashboard funcionando 🎉
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-pink-100 via-red-200 to-pink-100">
+      <h1 className="text-4xl font-bold text-gray-800">🔥 ¡Tailwind + React funcionando! 🔥</h1>
     </div>
   );
-
   const [mix, setMix] = useState(() => [] as FuelMix[]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
