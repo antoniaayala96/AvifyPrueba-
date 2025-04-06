@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "webpack-dev-server --hot --progress",
     "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
     "dev": "webpack-dev-server --hot --progress",
     "test": "jest"
   },
