@@ -9,25 +9,24 @@ module.exports = {
   mode: 'development',
   context: path.resolve(__dirname),
   target: 'web',
-  entry: {
-    app: ['./src/index.tsx']
-  },
+  entry: './src/index.tsx',
   output: {
-    filename: '[name]-[contenthash:6].bundle.js',
-    path: path.join(__dirname, './build/www'),
+    filename: 'bundle.js',
+
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     clean: true,
   },
   resolve: {
     mainFields: ['browser', 'module', 'main'],
-    extensions: ['.js', '.json', '.jsx', '.ts', '.tsx']
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.([jt])s(x?)$/,
+        test: /\.(ts|tsx)$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: 'babel-loader',
       },
       {
         test: /\.css$/,
@@ -53,8 +52,9 @@ module.exports = {
     })
   ],
   devServer: {
-    port,
+   
     host,
-    static: path.resolve(__dirname, 'src')
+    static: './dist',
+    port: 8080,
   },
 };
